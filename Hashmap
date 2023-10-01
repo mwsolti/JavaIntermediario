@@ -1,0 +1,24 @@
+Dicionário --- HashMap
+
+HashMap é uma array(vetor).
+Sua estrutura é formada por duas casas em cada linha.
+
+Chave / Valor
+
+HashMap<Tipo_Chave, Tipo_Valor>
+
+HashMap<K, V>
+
+declaração 
+HashMap<String,String> dict = new HashMap<String,String>
+
+adicionar item
+dict.put(chave, valor);
+
+remover item
+
+dict.remove(chave); 
+
+pegar um item
+
+dict.get(chave);
