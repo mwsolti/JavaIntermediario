@@ -1,0 +1,87 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package exercicioRevisao;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author walter.pasold
+ */
+public class ExercicioRevisao {
+
+    public static void main(String[] args) {
+       String categoriaFilmes = "";
+       int qtFilmes = 0;
+       int qtDias = 0;
+       String txt = "";
+       double valor = 5;
+       String codigoDesconto = "";
+       
+       txt = "Categorias: \n  Terror \n  Comedia \n  Animação";
+       
+       categoriaFilmes = JOptionPane.showInputDialog(txt);
+       
+        System.out.println(categoriaFilmes);
+
+        if (categoriaFilmes.equalsIgnoreCase("terror")) {
+            
+            qtFilmes = Integer.parseInt(JOptionPane.showInputDialog("Digite a Quantidade de Filmes"));
+            
+        }
+        else if (categoriaFilmes.equalsIgnoreCase("comedia")){
+            
+           qtFilmes = Integer.parseInt(JOptionPane.showInputDialog("Digite a Quantidade de Filmes"));
+            
+        }
+        else if (categoriaFilmes.equalsIgnoreCase("animacao")){
+            
+             qtFilmes = Integer.parseInt(JOptionPane.showInputDialog("Digite a Quantidade de Filmes"));
+        }
+        
+        if (qtFilmes == 1) {
+            
+            qtDias = 3; 
+        }
+        else if(qtFilmes == 2){
+            qtDias = 7;
+        }
+        else if (qtFilmes >=3){
+            qtDias = 15;
+        }
+        
+        valor = valor * qtFilmes;
+        
+        codigoDesconto = JOptionPane.showInputDialog("Você possui codigo de desconto \n 1 - SIM \n 2 - NÃO");
+        
+        if(codigoDesconto.equalsIgnoreCase("1")){
+            codigoDesconto = JOptionPane.showInputDialog("Digite o codigo");
+            
+            if (codigoDesconto.equalsIgnoreCase("01101")){
+                
+                valor = valor * 0.95;
+                        
+           }
+            else if(codigoDesconto.endsWith("00110")){
+                
+                
+                valor = valor * 0.85;
+                
+            }
+            else if (codigoDesconto.endsWith("00111")) {
+                
+                
+                valor = valor * 0.75;
+            }
+        }
+        
+        JOptionPane.showMessageDialog(null, "Alugou a Categoria: "+categoriaFilmes+" \n Quantidade de Dias: : "+qtDias+ " \n Valor: "+valor);
+        
+    }
+    
+    
+    
+}
